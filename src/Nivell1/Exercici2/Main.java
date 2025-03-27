@@ -7,5 +7,9 @@ public class Main {
         GenericMethods genericMethod = new GenericMethods<>();
 
         genericMethod.print("lollipop", newPerson, 12_000);
+        System.out.println();
+        genericMethod.print(newPerson, "umbrella", false);
+        System.out.println();
+        genericMethod.print(12.005, 0, "potato");
     }
 }
