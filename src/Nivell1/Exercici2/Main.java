@@ -3,13 +3,17 @@ package Nivell1.Exercici2;
 public class Main {
     public static void main(String[] args) {
 
-        Person newPerson = new Person("Mr.X", "Unkowingston", 40);
-        GenericMethods genericMethod = new GenericMethods<>();
+        Person person1 = new Person("Mr.X", "Unkowingston", 40);
+        Person person2 = new Person("Lady Lisbon", "Freeman", 35);
 
-        genericMethod.print("lollipop", newPerson, 12_000);
+        GenericMethods<String> genericIsString = new GenericMethods<>();
+        GenericMethods<Person> genericIsPerson = new GenericMethods<>();
+        GenericMethods<Integer> genericIsInteger = new GenericMethods<>();
+
+        genericIsString.print("lollipop", "umbrella", "potato");
         System.out.println();
-        genericMethod.print(newPerson, "umbrella", false);
+        genericIsPerson.print(person1, person2, person1);
         System.out.println();
-        genericMethod.print(12.005, 0, "potato");
+        genericIsInteger.print(12_005, 0, 23);
     }
 }
