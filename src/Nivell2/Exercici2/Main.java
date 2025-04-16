@@ -10,12 +10,11 @@ public class Main {
 
         List<Integer> list1 = Arrays.asList(1, 2, 3, 4, 5);
         List<String> list2 = Arrays.asList("one", "two", "three", "four", "five");
-        List<?> list3 = Arrays.asList(1, 2, 3, "four", "five");
+        List<Person> list3 = Arrays.asList(
+                new Person("John", "Sanders", 30),
+                new Person("Jane", "Wilkins", 25),
+                new Person("Jack", "Sparrow", 35));
 
-        listGenericMethods.print(list1, 102);
-        System.out.println();
-        listGenericMethods.print(list2, 12_000);
-        System.out.println();
-        listGenericMethods.print(list3, 1_000_000);
+        listGenericMethods.print(list1, list2, list3);
     }
 }
