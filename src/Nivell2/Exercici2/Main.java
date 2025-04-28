@@ -15,6 +15,10 @@ public class Main {
                 new Person("Jane", "Wilkins", 25),
                 new Person("Jack", "Sparrow", 35));
 
-        listGenericMethods.print(list1, list2, list3);
+        listGenericMethods.print(list1);
+        System.out.println("----");
+        listGenericMethods.print(list1, list2);
+        System.out.println("----");
+        listGenericMethods.print(list3, list2, list1);
     }
 }
